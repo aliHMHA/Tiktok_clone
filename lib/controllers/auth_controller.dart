@@ -7,6 +7,7 @@ import 'package:tiktok_clone/constrants.dart';
 import 'package:tiktok_clone/models/usermodel.dart';
 import 'package:tiktok_clone/views/screens/bottom_nav_screen.dart';
 import 'package:tiktok_clone/views/screens/login_screen.dart';
+import 'package:uuid/uuid.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -31,10 +32,8 @@ class AuthController extends GetxController {
   }
 
   Future<String> imageupload(File imagefile) async {
-    Reference ref = storage
-        .ref()
-        .child('profilePics')
-        .child(firbaseAuth11.currentUser!.uid);
+    String random = const Uuid().v1();
+    Reference ref = storage.ref().child('profilePics').child(random);
 
     UploadTask uploadTask = ref.putFile(imagefile);
     TaskSnapshot snap = await uploadTask;
