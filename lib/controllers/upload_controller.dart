@@ -204,7 +204,7 @@ class UploadController extends GetxController {
               content: Container(
                 padding: const EdgeInsets.only(top: 10),
                 width: media.width * .5,
-                height: media.height * .17,
+                height: media.height * .2,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
