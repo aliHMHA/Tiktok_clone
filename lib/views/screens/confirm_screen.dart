@@ -105,9 +105,11 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                               color: Colors.black,
                             )
                           : const Text(
-                              'Puplish',
+                              'Publish',
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
                             ))
                 ],
               ),
